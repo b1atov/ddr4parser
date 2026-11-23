@@ -19,7 +19,7 @@ items.sort(key=lambda item: float(item['price']))
 for item in items:
     print(item)
 
-'''
+
 @dp.message_handler(commands=["start"])
 async def start_message(message: types.Message):
     while True:
@@ -28,8 +28,8 @@ async def start_message(message: types.Message):
             text += item
 
         await message.reply(text)
-        await asyncio.sleep(3600*24)'''
+        await asyncio.sleep(3600*24)
 
 
-# if __name__ == "__main__":
-#     executor.start_polling(dp, skip_updates=True)
+if __name__ == "__main__":
+    executor.start_polling(dp, skip_updates=True)
